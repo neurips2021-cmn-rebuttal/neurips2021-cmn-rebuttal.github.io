@@ -47,7 +47,7 @@ The following figure shows the model **parameters** and **iteration** in <u>5 ta
 
    
 
-### 4.2 Iteration
+### 4.2 Iteration Time
 
 Iterations is the number of batches needed to complete one epoch. Denoting the number of images in a single training session as $N_p$, the Inter can be defined as:
 
