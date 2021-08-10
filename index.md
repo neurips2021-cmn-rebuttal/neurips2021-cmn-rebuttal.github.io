@@ -1,37 +1,67 @@
-## Welcome to GitHub Pages
+# 1.Anterograde forgetting 
 
-You can use the [editor on GitHub](https://github.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+![AnterogradeForgetting](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/figure1.png) 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# 2. AF 
 
-### Markdown
+![table1](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/table1.png) 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Given T task, denoting the accuracy on i-th task for the model trained on the i-th task as $P_{i,i}$ ,the accuracy on the i-th task through the joint learning as $n_{i,i}$, and the accuracy on the i-th task through the one learning as $m_i$, AF metrics can be defined as follows：
+$AF= \frac{1}{T-1}\sum^T_{i=2}(P_{i,i}-n_{i,i})+\frac{1}{T-1}\sum^T_{i=2}(P_{i,i}-m_{i})$
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+#  3. BWT
 
-- Bulleted
-- List
+![table2](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/table2.png) 
 
-1. Numbered
-2. List
+Given T task, denoting the accuracy on i-th task for the model trained on the T-th task as $P_{T,i}$ , the BWT metrics can be defined as follows:
+$BWT = \frac{1}{T-1}\sum_{i=1}^{T-1}(P_{T,i}-P_{i,i})$
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
+# 4. Model Parameters and Iteration
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+The following figure shows the model **parameters** and **iteration** in <u>5 tasks with 20 classes for CIFAR10 experiments.</u>
 
-### Jekyll Themes
+![table3](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/table3.png)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### 4.1.Parameters:
 
-### Support or Contact
+   * Test Parameters: The parameters of the model in the training phase.
+   * Train Parameters: The parameters of the model in the training phase.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+   Since all method backbone are set to ResNet-18, most of the model parameters are between 10M and 20M. Among them, the model parameters of PNN reached 57M, which is because PNN generates a new sub-network for each new task as it learns, so its parametric volume reached about five times of the other model. In addition, since HNet is a hyperparametric network capable of generating weights, its parametric number also differs from other models.
+
+   Most of the models keep the same number of parameters in the training phase and the prediction phase. Since CMN requires both L-Net and S-Net in the training phase, while only L-Net needs to be used in the prediction phase, its training phase parameters are twice as many as those in the prediction phase. In addition, since DGR uses a generator for generating pseudo-images and a Solver for prediction in the training, its training phase parameters are also larger than those in the prediction phase.
+
+   
+
+### 4.2 Iteration
+
+Iterations is the number of batches needed to complete one epoch. Denoting the number of images in a single training session as $N_p$, the Inter can be defined as:
+
+$Iter = N_ p/batchsize$
+
+A larger interation indicates a higher consumption of resources in a single training session. In this experiment, we have 5 tasks with 20 classes, and each class has 500 training images. And the batchsize of all methods are set to be 1024.
+
+The number of iterations for most of the methods is equal to 10.($Iter = (500*20)/1024 = 9.765625 \approx 10$)  Where Joint indicates learning all tasks at once, so it takes 50 iterations to complete an epoch.  In addition, DGR will generate the same number of pseudo-images for training, so it akes 20 iterations to complete an epoch.
+
+# 5. Grad CAM 
+
+<img src="https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/figure2.png" alt="Grand-CAM1" style="zoom:100%;" />
+
+
+Figures 2 and 3 show all our Grad CAM visualizations. the VOC2007 dataset has a total of 20 classes of data. We selected six of these categories: cat, dog, sheep, aeroplane, car, and motorbike for visualization testing. It is worth stating that since VOC2007 is a multi-label dataset, some images have complex background information (Figure.4). Therefore, we chose images with clear backgrounds and individual objects for visualization to highlight the model learning.
+
+<img src="https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/figure3.png" alt="voc2007 example" style="zoom: 100%;" />
+
+
+
+# 6. Transfer Cell
+
+![transfercell](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/figure4.png) 
+
+
+
+# 7. Confusion matrix on previous tasks
+
+![confusionMatrix](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/figure5.png)
