@@ -14,7 +14,7 @@
 
 ![AnterogradeForgetting](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/figure1.png) 
 
-# 2. AF 
+# 2. AF-matrics for anterograde forgetting  
 
 ![table1](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/table1.png) 
 
