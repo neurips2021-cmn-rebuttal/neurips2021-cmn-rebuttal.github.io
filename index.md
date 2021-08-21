@@ -85,19 +85,19 @@ Figures 2 and 3 show all our Grad CAM visualizations. the VOC2007 dataset has a 
 ### 8.1 ACC
 
 ![table4](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/table4.png)
-(The "$\$" indicates that the experiment is in progress. We will keep updating the experimental data.)
+(The "$\backslash$" indicates that the experiment is in progress. We will keep updating the experimental data.)
 
 ### 8.2 FWT
 
 ![table5](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/table5.png)
-(The "$\$" indicates that the experiment is in progress. We will keep updating the experimental data.)
+(The "$\backslash$" indicates that the experiment is in progress. We will keep updating the experimental data.)
 
 ### 8.3 AF
 
 ![table6](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/table6.png)
-(The "$\$" indicates that the experiment is in progress. We will keep updating the experimental data.)
+(The "$\backslash$" indicates that the experiment is in progress. We will keep updating the experimental data.)
 
 ### 8.4 BWT
 
 ![table7](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/table7.png)
-(The "$\$" indicates that the experiment is in progress. We will keep updating the experimental data.)
+(The "$\backslash$" indicates that the experiment is in progress. We will keep updating the experimental data.)
