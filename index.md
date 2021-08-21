@@ -18,8 +18,8 @@
 
 ![table1](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/table1.png) 
 
-Given T task, denoting the accuracy on i-th task for the model trained on the i-th task as $P_{i,i}$ ,the accuracy on the i-th task through the joint learning as $n_{i,i}$, and the accuracy on the i-th task through the one learning as $m_i$, AF metrics can be defined as follows：
-$AF= \frac{1}{T-1}\sum^T_{i=2}(P_{i,i}-n_{i,i})+\frac{1}{T-1}\sum^T_{i=2}(P_{i,i}-m_{i})$
+Given T task, denoting the accuracy on i-th task for the model trained on the i-th task as $P_{i,i}$ ,the average accuracy for the model trained on i task as {ACC_{i}},the accuracy on the i-th task through the joint learning as $n_{i,i}$, and the accuracy on the i-th task through the one learning as $m_i$, AF metrics can be defined as follows：
+$AF= \frac{1}{T-1}\sum^T_{i=2}(ACC_{i}-n_{i,i})+\frac{1}{T-1}\sum^T_{i=2}(P_{i,i}-m_{i})$
 
 
 #  3. BWT
