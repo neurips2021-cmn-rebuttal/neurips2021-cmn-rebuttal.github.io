@@ -77,3 +77,14 @@ Figures 2 and 3 show all our Grad CAM visualizations. the VOC2007 dataset has a 
 # 7. Confusion matrix on previous tasks
 
 ![confusionMatrix](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/figure5.png)
+
+# 8. statistical analysis
+1. ACC
+![table4](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/table4.png)
+2. FWT
+![table5](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/table5.png)
+3. AF
+![table6](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/table6.png)
+4. BWT
+![table7](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/table7.png)
+
