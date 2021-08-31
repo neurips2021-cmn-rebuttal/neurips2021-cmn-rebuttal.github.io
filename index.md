@@ -18,7 +18,7 @@
 
 ![table1](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/table1.png) 
 
-Given T task, denoting the accuracy on i-th task for the model trained on the i-th task as $P_{i,i}$ ,the average accuracy for the model trained on i task as {ACC_{i}},the accuracy on the i-th task through the joint learning as $n_{i,i}$, and the accuracy on the i-th task through the one learning as $m_i$, AF metrics can be defined as follows：
+Given T task, denoting the accuracy on i-th task for the model trained on the i-th task as $P_{i,i}$ ,the average accuracy for the model trained on i task as $ACC_{i}$,the accuracy on the i-th task through the joint learning as $n_{i,i}$, and the accuracy on the i-th task through the one learning as $m_i$, AF metrics can be defined as follows：
 $AF= \frac{1}{T-1}\sum^T_{i=2}(ACC_{i}-n_{i,i})+\frac{1}{T-1}\sum^T_{i=2}(P_{i,i}-m_{i})$
 
 
@@ -32,7 +32,7 @@ $BWT = \frac{1}{T-1}\sum_{i=1}^{T-1}(P_{T,i}-P_{i,i})$
 
 # 4. Model Parameters and Iteration
 
-The following figure shows the model **parameters** and **iteration** in <u>5 tasks with 20 classes for CIFAR10 experiments.</u>
+The following figure shows the model **parameters** and **iteration** in <u>5 tasks with 20 classes for CIFAR100 experiments.</u>
 
 ![table3](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/table3.png)
 
@@ -101,3 +101,17 @@ Figures 2 and 3 show all our Grad CAM visualizations. the VOC2007 dataset has a 
 
 ![table7](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/table7.png)
 (The "$\backslash$" indicates that the experiment is in progress. We will keep updating the experimental data.)
+
+# 9. Comparison of  training parameter size with tasks
+
+![Parameter](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/figure67.png)
+
+# 10. Progressive Neural Networks
+
+![PNN](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/figure8.png)
+
+Rusu, A. A., Rabinowitz, N. C., Desjardins, G., Soyer, H., Kirkpatrick, J., Kavukcuoglu, K., ... & Hadsell, R. (2016). Progressive neural networks. arXiv preprint arXiv:1606.04671.
+
+# 11. Comparison between CMN and PNN under identical parameter size setting 
+
+![PNN-AMN](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/figure9.png)
