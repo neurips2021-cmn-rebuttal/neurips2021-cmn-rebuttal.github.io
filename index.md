@@ -106,12 +106,16 @@ Figures 2 and 3 show all our Grad CAM visualizations. the VOC2007 dataset has a 
 
 ![Parameter](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/figure67.png)
 
-# 10. Progressive Neural Networks
 
-![PNN](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/figure8.png)
+# 10. Comparison between CMN and PNN under identical parameter size setting 
+
+The following figure shows CMN and PNN in 10 tasks with 10 classes for CIFAR100 experiments. All methods in this part of the experiment use ResNet-18 as the backbone network.
+
+![PNN-AMN](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/figure8.png)
+
+
+# 11. Progressive Neural Networks
+
+![PNN](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/figure9.png)
 
 Rusu, A. A., Rabinowitz, N. C., Desjardins, G., Soyer, H., Kirkpatrick, J., Kavukcuoglu, K., ... & Hadsell, R. (2016). Progressive neural networks. arXiv preprint arXiv:1606.04671.
-
-# 11. Comparison between CMN and PNN under identical parameter size setting 
-
-![PNN-AMN](https://raw.githubusercontent.com/neurips2021-cmn-rebuttal/neurips2021-cmn-rebuttal.github.io/master/figure/figure9.png)
